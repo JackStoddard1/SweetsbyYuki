@@ -1,0 +1,329 @@
+/*
+Color Scheme:
+  Light Beige:      #FFFBEF     
+  Bright Beige:     #FFF2D7     
+  Brown:            #82562E     
+  Pink:             #F77DBC     
+  Gray:             #E4E4E4     
+*/
+
+@import "bootstrap";
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar 
+}
+*/
+
+/*----------------------------HEADER----------------------------*/
+.header {
+  height: inherit;
+  background-color: #82562E;
+  list-style-type: none;
+}
+
+.website-header {
+  font-size: calc(2.5em + 3vw);
+}
+
+@media (min-width: 992px) { /* DESKTOP VIEW:: lg BREAKPOINT*/
+  .header h1 {
+    text-align: left;
+  }
+}
+
+.navbar-buttons {
+  font-size: calc(1.25em + 0.75vw);
+  text-align: center;
+}
+
+.header ul {
+  list-style-type: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.header a:hover:not(.home-button) {
+  color: #F77DBC;
+}
+
+/*----------------------------HEADER----------------------------*/
+
+
+
+/*-----------------------------HOME-----------------------------*/
+
+.home-page {
+  position: relative;
+  overflow: hidden;
+  height: 1000px;
+  max-width: 100%;
+  width: 1920px;
+  background-image: url("images/home-page-bg.png"), url("images/home-page-bg.jpg");
+  background-size: cover;
+}
+
+.home-page-img {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  top: 0%;
+  left: 0px;
+}
+
+.home-page-img img {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 30%,transparent 80%);
+}
+
+.home-page-mask {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  object-fit: cover;
+  mask-image: url("images/home-page-bg.png");
+}
+
+.home-page-note {
+  height: 55%;
+  position: absolute;
+  padding-top: 18vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+@media (min-width: 1400px) { /* DESKTOP VIEW:: lg BREAKPOINT*/
+  .home-page-img img {
+    mask-image: linear-gradient(to right,rgba(0,0,0,1) 30%,transparent 75%);
+  }
+
+  .home-page-note {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    top: 20%;
+    right: 0px;
+  }
+}
+
+@media (min-width: 1700px) { /* DESKTOP VIEW:: lg BREAKPOINT*/
+  .home-page-img img {
+    mask-image: linear-gradient(to right,rgba(0,0,0,1) 40%,transparent 90%);
+  }
+}
+
+.home-page h1 {
+  font-size: calc(2.0em + 2.0vw);
+  color: #F77DBC;
+}
+
+.home-page h2 {
+  font-size: calc(1.1em + 1.0vw);
+}
+
+.home-page p {
+  font-family: 'Cantata One', sans-serif;
+  font-size: 18px;
+}
+
+/*-----------------------------HOME-----------------------------*/
+
+
+
+/*-----------------------------ABOUT----------------------------*/
+
+.about-note {
+  padding: 1%;
+  background-color: white;
+  border: solid;
+  border-color: #82562E;
+  border-width: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-page {
+  background-color: #FFF2D7;
+}
+
+.about-page-title {
+  font-size: calc(2.0em + 1.0vw);
+  text-align: center;
+}
+
+/*-----------------------------ABOUT----------------------------*/
+
+
+
+/*----------------------------SWEETS----------------------------*/
+
+.sweets-page {
+  top:0px;
+  left:0px;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  background: repeating-linear-gradient(45deg, #FFFBEF, #FFFBEF 20px, #FFF2D7 20px, #FFF2D7 40px);
+  background-size: 100%;
+  background-position: 100% 100%; 
+}
+
+.sweets-page-img-mbl {
+  width: 100%;
+}
+
+.sweets-page-img {
+  width: 100%;
+}
+
+/*----------------------------SWEETS----------------------------*/
+
+
+
+/*----------------------------ORDER-----------------------------*/
+
+.order-page {
+  background: linear-gradient(135deg, #FFF2D7 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, #FFF2D7 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, #FFF2D7 25%, transparent 25%),
+              linear-gradient(45deg, #FFF2D7 25%, transparent 25%); 
+  background-size: 100px 100px;
+  background-color: #FFFBEF;
+}
+
+.order-page-main {
+  padding: 1%;
+  background-color: white;
+  border: solid;
+  border-color: #F77DBC;
+  border-width: 20px;
+  border-image: repeating-linear-gradient(
+      45deg,
+      #82562E,
+      #82562E 20px,     
+      #F77DBC 20px,
+      #F77DBC 40px) 20;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.order-page-title {
+  font-size: calc(2.0em + 1.0vw);
+  text-align: center;
+}
+
+.order-page-subtitle {
+  font-size: calc(1.4em + 0.65vw);
+  text-align: center;
+}
+
+.order-page-cost {
+  font-size: calc(1.0em + 0.65vw);
+  text-align: center;
+}
+
+.order-page-package-details {
+  font-size: calc(1.0em + 0.4vw);
+  text-align: center;
+}
+
+.order-note {
+  padding: 1%;
+  background-color: white;
+  border: solid;
+  border-color: #82562E;
+  border-width: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/*----------------------------ORDER-----------------------------*/
+
+
+
+/*----------------------------FOOTER----------------------------*/
+
+.footer { /* https://css-generators.com/wavy-shapes/ */
+  position: relative;
+  margin: -20px 0vw 0vh 0vw;
+  background-color: #ECE9EC;
+
+  --mask:
+    radial-gradient(14.65px at 50% 20.4px,#000 99%,#0000 101%) calc(50% - 24px) 0/48px 100%,
+    radial-gradient(14.65px at 50% -8.4px,#0000 99%,#000 101%) 50% 12px/48px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.footer-info-1 {
+  margin: 0vh 0vw 10vh 0vw;
+  color: gray;
+}
+
+.footer-icon {
+  width: 35px;
+  margin: 1vh 0vw 0vh 0vw;
+  filter: invert(53%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(95%) contrast(96%);
+}
+
+.footer-icon:hover {
+  filter: invert(9%) sepia(83%) saturate(6572%) hue-rotate(348deg) brightness(90%) contrast(103%);
+}
+
+/*----------------------------FOOTER----------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Princess Sofia', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Cantata One', sans-serif;
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Caveat', sans-serif;
+  font-size: 16px;
+}
+
+h4 {
+  color: black;
+}
+
+h5 {
+  color: black;
+}
+
+h6 {
+  color: black;
+}
+
+p {
+  font-family: 'Cantata One', sans-serif;
+  font-size: 16px;
+}
+
+p.indent {
+  text-indent: 30px;
+}
