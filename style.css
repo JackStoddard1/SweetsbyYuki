@@ -166,6 +166,12 @@ body {
   text-align: center;
 }
 
+.about-page-signature {
+  color: #F77DBC;
+  font-size: calc(2.0em + 1.0vw);
+  text-align: right;
+}
+
 /*-----------------------------ABOUT----------------------------*/
 
 
