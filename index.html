@@ -1,278 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title class="l10n">Rei Shiatsu - Home</title>
+  <title>Sweets by Yuki</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Bebas+Neue:wght@400&family=Dancing+Script:wght@700&family=Noto+Sans+JP:wght@500&family=Noto+Serif+JP:wght@500&family=Oleo+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Caveat:wght@400..700&family=Princess+Sofia&display=swap" rel="stylesheet">
 </head>
 
-<nav class="d-none d-lg-block">
-  <ul class="desktop-navbar">
-    <li class="desktop-navbar-item"><a class="l10n" href="index.html">HOME</a></li>
-    <li class="desktop-navbar-item"><a class="l10n" href="qna.html">QUESTIONS</a></li>
-    <li class="desktop-navbar-item"><a class="l10n" href="prices.html">PRICES</a></li>
-    <li class="desktop-navbar-item"><a class="l10n" href="about.html">ABOUT ME</a></li>
-    <li class="desktop-navbar-item"><p> </p></a></li>
-    <li class="desktop-navbar-item"><input class="english-button l10n" type="button" id="swap-lang-en"></li>
-    <li class="desktop-navbar-item"><p>|</p></a></li>
-    <li class="desktop-navbar-item"><input class="japanese-button l10n" type="button" id="swap-lang-jp"></li>
+<body>
+
+<!--
+<div class="container-sm border">.container-xs</div>
+<div class="container-sm mt-3 border">.container-sm</div>
+<div class="container-md mt-3 border">.container-md</div>
+<div class="container-lg mt-3 border">.container-lg</div>
+<div class="container-xl mt-3 border">.container-xl</div>
+<div class="container-xxl mt-3 border">.container-xxl</div>
+-->
+
+<nav class="header container-fluid pt-3" id="home">
+  <ul class="row flex-grow-1 m-0 p-0">
+    <li class="col-12 col-lg-6 pb-3">
+      <a href="#home" class="home-button"><h1 class="website-header">Sweets by Yuki</h1></a>
+    </li>
+    <li class="col-4 col-lg-2 my-auto">
+      <a href="#about"><h2 class="navbar-buttons">-About-</h2></a>
+    </li>
+    <li class="col-4 col-lg-2 my-auto">
+      <a href="#sweets"><h2 class="navbar-buttons">-Sweets-</h2></a>
+    </li>
+    <li class="col-4 col-lg-2 my-auto">
+      <a href="#order"><h2 class="navbar-buttons">-Order-</h2></a>
+    </li>
   </ul>
 </nav>
 
-<nav class="d-lg-none">
-  <input type="image" src="assets\list.svg" alt="menu-icon" class="mobile-navbar-icon" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false" aria-controls="mobile-navbar" value="1" id="icon-change" onclick="changeIcon()">
-  <div class="collapse mobile-navbar" id="mobile-navbar">
-    <ul class="mobile-navbar-nav">
-      <li class="mobile-navbar-item"><a class="l10n" href="index.html">HOME</a></li>
-      <li class="mobile-navbar-item"><a class="l10n" href="qna.html">QUESTIONS</a></li>
-      <li class="mobile-navbar-item"><a class="l10n" href="prices.html">PRICES</a></li>
-      <li class="mobile-navbar-item"><a class="l10n" href="about.html">ABOUT ME</a></li>
-      <li class="mobile-navbar-item">
-        <input class="english-button l10n" type="button" id="swap-lang-en-mobile">
-        <input class="japanese-button l10n" type="button" id="swap-lang-jp-mobile">
-      </li>
-    </ul>
+<div class="home-page m-0 p-0">
+  <div class="home-page-img m-0 p-0">
+    <img class="home-page-mask d-sm-none" src="images/home-page-img-mbl.png" alt="dessert image">
+    <img class="home-page-mask d-none d-sm-block" src="images/home-page-img.png" alt="dessert image">
   </div>
-</nav>
-
-<script>
-function changeIcon() {
-  if (document.getElementById("icon-change").value == "1") {
-    document.getElementById("icon-change").src = "assets/up.svg";
-    document.getElementById("icon-change").value = "0";
-  } else {
-    document.getElementById("icon-change").src = "assets/list.svg";
-    document.getElementById("icon-change").value = "1";
-  }
-}
-</script>
-
-<div class="home-main">
-  <img class="d-none d-md-block d-lg-block home-left-leaves" src="images\leaves-back-left.png" alt="left-leaves">
-  <img class=home-left-floral src="images\floral-back-left.png" alt="left-floral-leaves">
-  <img class=home-logo src="images\Logo2.png" alt="rei-shiatsu">
-  <img class=home-right-floral src="images\floral-back-right.png" alt="right-floral-leaves">
-  <img class="d-none d-md-block d-lg-block home-right-leaves" src="images\leaves-back-right.png" alt="right-leaves">
-</div>
-
-<div class="info-box">
-  <div class="row">
-    <div class="col-xs-12 col-lg-4">
-      <div class="d-flex flex-row align-items-start">
-        <img class="info-box-icon mr-4" src="assets\house-door-fill.svg" alt="home-icon">
-        <div class="info-box-info">
-          <h6 class="l10n">Our Location</h6>
-          1101 S Winchester Blvd, Suite J-210, San Jose, CA 95128
-          <br><a href="https://www.functionbetterhc.com/">(Function Better Holistic Center)</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-lg-4">
-      <div class="d-flex flex-row align-items-start">
-        <img class="info-box-icon mr-4" src="assets\telephone-fill.svg" alt="phone-icon">
-        <div class="info-box-info">
-          <h6 class="l10n">Appointment Only</h6>
-          <p class="info-box-info l10n">For reservations and questions, please text:</p>
-          <br><p class="info-box-info l10n">(510) 684-0386.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-lg-4">
-      <div class="d-flex flex-row align-items-start">
-        <img class="info-box-icon mr-4" src="assets\clock-fill.svg" alt="clock-icon">
-        <div class="info-box-info">
-          <h6 class="l10n">Opening Hours</h6>
-          <p class="info-box-p l10n">Wednesday and Thursday</p>
-          10AM - 7PM
-        </div>
-      </div>
+  <div class="row m-0 p-0">
+    <div class="home-page-note m-0">
+      <h2>- FROM SCRATCH -</h2>
+      <h1>Made with Love</h1><br>
+      <p class="home-page-note-text">Fluffy, sweet, mouthwatering pastries made fresh without any shortcuts, ensuring quality and taste.</p>
     </div>
   </div>
 </div>
 
-<div class="testimonials-box">
-  <div class="testimonials-box-header">
-    <h1 class="l10n">Testimonials</h1>
+<div class="about-page m-0 p-0" id="about">
+  <div class="row m-0 pb-5 px-0 justify-content-around">
+    <div class="col-0 col-md-1 order-md-1"></div>
+    <div class="about-note col-9 col-md-5 order-md-2">
+      <h2 class="about-page-title">About Me</h2>
+      <p class="indent">Hello, my name is Yuki and I’m a professionally trained baker that graduated from culinary school in Japan over twenty years ago. Over that time I’ve taken the time to craft the perfect recipes, influenced from my time in multiple bakeries, to scratch that sweet tooth. Because of that, I hope you’ll take the time to consider ordering from me!  </p>
+      <h1 class="about-page-signature">- Yuki</h1>
+    </div>
+    <div class="about-image text-center col-9 col-md-5 order-md-3">
+      <img class="img-fluid m-0" src="images/about-img.png" alt="about me card">
+    </div>
+    <div class="col-0 col-md-1 order-md-4"></div>
   </div>
-  <div class="row gx-5">
-    <div class="testimonials-quote-col col-md-12 col-lg-4 mb-5">
-      <span class="quote-icon">
-        <p>,,</p>
-      </span>
-      <div class="testimonial-text">
-        <p class="indent l10n">First Quote 1</p>
-        <p class="l10n">First Quote 2</p>
-        <p class="l10n">First Quote 3</p>
-        <p class="testimonials-person l10n">-M</p>
-      </div>
-    </div>
-    <div class="testimonials-quote-col col-md-12 col-lg-4 mb-5">
-      <span class="quote-icon">
-        <p>,,</p>
-      </span>
-      <div class="testimonial-text">
-        <p class="indent l10n">Second Quote 1</p>
-        <p class="l10n">Second Quote 2</p>
-        <p class="l10n">Second Quote 3</p>
-        <p class="l10n">Second Quote 4</p>
-        <p class="l10n">Second Quote 5</p>
-        <p class="testimonials-person l10n">-S</p>
-      </div>
-    </div>
-    <div class="testimonials-quote-col col-md-12 col-lg-4 mb-5">
-      <span class="quote-icon">
-        <p>,,</p>
-      </span>
-      <div class="testimonial-text">
-        <p class="indent l10n">Third Quote 1</p>
-        <p class="l10n">Third Quote 2</p>
-        <p class="l10n">Third Quote 3</p>
-        <p class="l10n">Third Quote 4</p>
-        <p class="l10n">Third Quote 5</p>
-        <p class="testimonials-person l10n">-K</p>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
-<div class="prologue-box">
-  <div class="row">
-    <div class="prologue-box-col col-12 m-0">
-      <h1 class="l10n">Prologue</h1>
-      <p class="indent l10n">I’m Rei Tan, a Massage therapist in the Bay Area.</p>
-      <p class="indent l10n">Prologue info</p>
-    </div>
-    <div class="prologue-box-col col-12 m-0">
-      <div class="prologue-box-img">
-        <img class="prologue-box-img" src="images\rei-image.jpg" alt="rei-working">
-      </div>
-    </div>
-  </div>
+<div class="sweets-page" id="sweets">
+  <img class="sweets-page-img-mbl d-sm-none" src="images/sweets-page-mobile.png" alt="sweets scrapboard">
+  <img class="sweets-page-img d-none d-sm-block m-0 p-0" src="images/sweets-page-desktop.png" alt="sweets scrapboard">
 </div>
 
-<div class="benefits-box mb-5">
-  <div class="row">
-    <div class="benefits-box-col col-md-6 col-lg-3 m-0">
-      <h1 class="l10n">Shiatsu Benefits</h1>
-      <p class="indent l10n">Shiatsu is a Japanese form of therapeutic bodywork, that combines Chinese concepts of medicine, traditional Japanese therapies, as well as more modern western knowledge in order to harmonize the body. While its modern research has been limited, multitudes of benefits have been found. Listed here are some of the documented benefits, feel free to click on the images to view the studies from trusted scientific societies and foundations that support each benefit.</p>
-    </div>
-    <div class="benefits-box-col col-md-6 col-lg-3 m-0">
-      <div class="benefits-box-img">
-        <a href="https://www.jstage.jst.go.jp/article/kmj1997/50/3/50_3_227/_article" target="_blank" rel="noopener noreferrer">
-          <img class="benefits-box-img hover-overlay zoom" src="images\shiatsu-benefits-1.jpg" alt="shiatsu-benefits-1">
-        </a>
-      </div>
-      <h3 class="l10n">Reduces Stress</h3>
-      <p class="l10n">A Japanese cancer study showed that with just a simple passive shiatsu treatment there was both a reduction in anxiety and an increase in patient's relaxation and overall comfort.</p>
-    </div>
-    <div class="benefits-box-col col-md-6 col-lg-3 m-0">
-      <div class="benefits-box-img"> 
-        <a href="https://www.annalsofoncology.org/article/S0923-7534(20)35017-1/fulltext" target="_blank" rel="noopener noreferrer">
-          <img src="images\shiatsu-benefits-2.jpg" alt="shiatsu-benefits-2">
-        </a>
-      </div>
-      <h3 class="l10n">Increases Sleep Quality</h3>
-      <p class="l10n">Studies with cancer patients have shown an increase in well-being and quality of life with a 35% decrease in fatigue and a general increase in quality of sleep and overall energy.</p>
-    </div>
-    <div class="benefits-box-col col-md-6 col-lg-3 m-0">
-      <div class="benefits-box-img">
-        <a href="https://www.arthritis.org/health-wellness/treatment/complementary-therapies/natural-therapies/types-of-massage" target="_blank" rel="noopener noreferrer">
-          <img class="benefits-box-img" src="images\shiatsu-benefits-3.jpg" alt="shiatsu-benefits-3">
-        </a>
-      </div>
-      <h3 class="l10n">Helps with Joint Pain</h3>
-      <p class="l10n">The Arthritis Foundation, the largest nonprofit organization for America's leading cause of disability, recommends shiatsu as a complementary natural therapy to help with joint pain.</p>
+<div class="order-page" id="order">
+  <div class="row m-0 py-5 px-0 justify-content-center">
+    <div class="order-page-main col-9 col-md-7">
+      <h2 class="order-page-title">Order</h2>
+      <p class="indent">Text or call 931-217-8878 at least 3 days in advance to set up an order. Please note all orders, other any package offer, must total above $35 and you must order at least a half dozen of any chosen item. Sorry for the inconvenience, but as a home bakery this is the only way to maintain the quality and freshness of our desserts. Thank you for your understanding!</p>
+      <h2 class="order-page-subtitle"><br>Thanksgiving Package ($35)</h2>
+      <h2 class="order-page-package-details">6 Muffins of any 1 Flavor</h2>
+      <h2 class="order-page-package-details">4 Chocolate Chip Cookies</h2>
+      <h2 class="order-page-package-details">4 Slices of Bread any 1 Flavor</h2>
+      <h2 class="order-page-package-details">4 Thanksgiving Surprises</h2> 
+      <p class="indent">The Thanksgiving Package offers a variety of treats to, hopefully, satisfy any and all sweet cravings that may come up this Thanksgiving. We recommend the Blueberry Muffins and the Pumpkin Cranberry Bread to really hit the holiday right!</p>
     </div>
   </div>
-</div>
 
-<div class="location-box m-0">
-  <div class="row m-0">
-    <div class="location-box-img col-md-12 col-lg-5">
-      <a href="https://maps.app.goo.gl/5YpyQR5ob3jGHAHz7" target="_blank" rel="noopener noreferrer">
-        <img class="img_hover" src="images\location-google.png" alt="google-view">
-      </a>
+  <div class="row align-items-center m-0 pb-5 px-0 justify-content-around">
+    <div class="order-image text-center col-9 col-md-5 order-md-1">
+      <img class="img-fluid" src="images/order-img-muffins.png" alt="muffins image">
     </div>
-    <div class="location-box-spacer col-md-12 col-lg-1">
+    <div class="order-note col-9 col-md-5 order-md-2">
+      <h2 class="order-page-subtitle">Muffins</h2>
+      <h2 class="order-page-cost">1 Dozen | $24 </h2>
+      <h2 class="order-page-cost">1/2 Dozen | $15 </h2>
+      <p class="indent">Buttery, sweet, crumble tops the most perfect soft and moist base of our muffins that leave you wanting more. Choose from a variety of flavors perfect for any time of day; from a quick and easy breakfast to a sweet guilty pleasure.</p>
+      <p><b>Flavors:</b> Blueberry, Apple Cinnamon, Cranberry Orange, Chocolate Chip, & Pumpkin Spice (Seasonal)</p>
     </div>
-    <div class="location-box-info col-md-12 col-lg-6 p-5">
-      <h2 class="l10n">Rei Shiatsu</h2>
-      <div class="row m-0">
-        <div class="col-xl-6 col-lg-12 m-0 pl-0">
-          <p class="location-text"><br>1101 S Winchester Blvd, 
-            <br>Suite J-210,
-            <br>San Jose, CA 95128</p>
-        </div>
-        <div class="d-none d-lg-block col-6 m-0 pl-0"> <!-- Hours on Desktop-->
-          <p class="location-text"><br><b class="l10n">Opening Hours</b>
-            <p class="l10n">Wednesday and Thursday<br>10AM - 7PM</p>
-          </p>
-        </div>
-        <img src="images\location_map.jpeg" alt="map_img"> <!-- Hours on Mobile-->
-        <div class="d-lg-none col-12 m-0 pl-0">
-          <p class="location-text"><br><b class="l10n">Opening Hours</b>
-            <p class="l10n">Wednesday and Thursday<br>10AM - 7PM</p>
-          </p>
-        </div>
-      </div>
-      <br><br><p class="l10n"></p> 
-    </div>
+    <div class="col-0 col-md-1 order-md-3"></div>
   </div>
-</div>
 
-<div class="shiatsu-info-box">
-  <div class="row">
-    <div class="shiatsu-info-col col-sm-12 col-md-5 order-md-1">
-      <h1 class="l10n">What to Expect</h1>
-      <p class="indent l10n">Massage sessions combine elements of acupuncture and stretching into a full body massage. We recommend loose-fitting clothing such as pajamas, we have a room that you can change in, in order to get the best experience. The first half of the session you will be lying on your stomach and then on your back during the later half. If you can't lie on your stomach or have any difficulties you may like on your side or back. In the beginning of the massage the pressure will be light before gradually transitioning stronger. Please let us know at any time if you experience any pain or discomfort.</p>
+  <div class="row align-items-center m-0 pb-5 px-0 justify-content-around">
+    <div class="order-image text-center col-9 col-md-5 order-md-3">
+      <img class="img-fluid" src="images/order-img-bread.png" alt="bread image">
     </div>
-    <div class="shiatsu-info-col col-sm-12 col-md-7 order-md-2">
-      <img class="shiatsu-info-img" src="images/rei-work-image.jpg" alt="shiatsu-image">
+    <div class="order-note col-9 col-md-5 order-md-2">
+      <h2 class="order-page-subtitle">Sliced Bread</h2>
+      <h2 class="order-page-cost">1 Loaf (8 Slices) | $15 </h2>
+      <h2 class="order-page-cost">4 Slices | $10 </h2>
+      <p class="indent">One of our best sellers, our sliced breads are moist and dense, packed with flavor. </p>
+      <p><b>Flavors:</b> Banana & Pumpkin Cranberry</p> <!-- Zucchini? -->
     </div>
-    <div class="shiatsu-info-col col-sm-12 col-md-5 order-md-4">
-      <h1 class="l10n">After the Session</h1>
-      <p class="indent l10n">You should drink lots of water and continue to stretch your entire body. Because we will be working muscles that you may not usually work with regularly, your blood flow may improve causing dizziness, so please move with care. Also be aware that drinking alcohol on the day of the session may cause you to get drunk faster than normal.</p>
-    </div>
-
-    <div class="shiatsu-info-col col-sm-12 col-md-7 order-md-3">
-      <img class="shiatsu-info-img" src="images/after-shiatsu.jpg" alt="after-shiatsu-image">
-    </div>
-    
+    <div class="col-0 col-md-1 order-md-1"></div>
   </div>
+
+  <div class="row align-items-center m-0 pb-5 px-0 justify-content-around">
+    <div class="order-image text-center col-9 col-md-5 order-md-1">
+      <img class="img-fluid" src="images/order-img-cookies.png" alt="cookies image">
+    </div>
+    <div class="order-note col-9 col-md-5 order-md-1">
+      <h2 class="order-page-subtitle">Cookies</h2>
+      <h2 class="order-page-cost">1 Dozen | $24 </h2>
+      <h2 class="order-page-cost">1/2 Dozen | $15 </h2>
+      <p class="indent">Decadent chocolate chip cookies with an extra hit of chocolate chunks making sure we hit that sweet tooth. Each bite is perfect with a warm mug of coffee or with a cold glass of milk taking you back to our childhood dreams.</p>
+      <p><b>Flavors:</b> Chocolate Chip, Oatmeal, Peanut Butter, & White Chocolate Macadamia Nut</p>
+    </div>
+    <div class="col-0 col-md-1 order-md-3"></div>
+  </div>
+
+  <div class="row align-items-center m-0 pb-5 px-0 justify-content-around">
+    <div class="order-image text-center col-9 col-md-5 order-md-3">
+      <img class="img-fluid" src="images/order-img-cupcakes.png" alt="cupcakes image">
+    </div>
+    <div class="order-note col-9 col-md-5 order-md-2">
+      <h2 class="order-page-subtitle">Cupcakes</h2>
+      <h2 class="order-page-cost">1 Dozen | $24 </h2>
+      <h2 class="order-page-cost">1/2 Dozen | $15 </h2>
+      <p class="indent">Our cupcakes are rich and moist and while we may have our own favorite flavors, we made sure to give you the options to make your own. Pick from one of our base flavors and layer on your choice of ultra sweet toppings from our Italian Meringue based Buttercream to our Cream Cheese Frosting. And if you send a picture, we'll be able to decorate the cupcakes to your liking, though an additional fee may be charged depending on the decorations.</p>
+      <p><b>Base Flavors:</b> Chocolate, Vanilla, Red Velvet, Honey Lemon, & Carrot</p>
+      <p><b>Toppings:</b> Chocolate Buttercream, Vanilla Buttercream, Honey Buttercream, & Cream Cheese Frosting</p>
+    </div>
+    <div class="col-0 col-md-1 order-md-1"></div>
+  </div>
+
+  <div class="row align-items-center m-0 pb-5 px-0 justify-content-around">
+    <div class="order-image text-center col-9 col-md-5 order-md-1">
+      <img class="img-fluid" src="images/order-img-jpbread.png" alt="japanese bread image">
+    </div>
+    <div class="order-note col-9 col-md-5 order-md-2">
+      <h2 class="order-page-subtitle">Japanese Bread</h2>
+      <h2 class="order-page-cost">1 Dozen | $30 </h2>
+      <h2 class="order-page-cost">1/2 Dozen | $18 </h2>
+      <p class="indent">Soft fluffy breads topped or filled with traditional Japanese flavors. We make a variety of types from the traditional An-pan, filled with Japanese red bean paste, to the ever so popular Melon-pan, similar to concha but with a more cookie-like topping.</p>
+      <p><b>Types: </b>Melon-pan, An-pan, Cream-pan, Egg Salad-pan, Fruit Custard-pan</p>
+    </div>
+    <div class="col-0 col-md-1 order-md-3"></div>
+  </div>
+
 </div>
 
-<div class="footer p-5">
+
+<div class="footer p-3">
   <div class="row mt-5 ml-5 mr-5">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-12 col-md-6 m-0">
       <div class="footer-info-1">
-        <h5 class="l10n">Rei Shiatsu</h5>
-        <a href="https://maps.app.goo.gl/5YpyQR5ob3jGHAHz7">
-          1101 S Winchester Blvd, Building J, Suite J-210,
-          <br>San Jose, CA 95128<br>
+        <h5>Sweets by Yuki</h5>
+        <a href="https://maps.app.goo.gl/BXxX4R3F1ykwfKwg9">
+          11530 Verdis Valley, <br>San Antonio, TX 78245 
+          <br>
         </a>
-        <footer-info-1 class="l10n">
-          We are located in Function Better Holistic Center.
-        </footer-info-1>
-        <br><footer-info-1 class="l10n">For reservations and questions, please text:</footer-info-1> 
-        <footer-info-1 class="l10n">(510) 684-0386.</footer-info-1> 
+        <h5 class="footer-disclaimer">
+          ALL PRODUCTS ARE PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION.
+        </h5>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6 pr-3">
+    <div class="col-12 col-md-6 pr-3 m-0">
       <div class="footer-info-1">
-        <h5 class="l10n">Check Us Out</h5>
-          <a href="https://www.instagram.com/rei_shiatsu/" target="_blank" style="padding-left: 12px;"><img class="footer-icon" src="assets\instagram.svg" alt="instagram-icon"></a>
-          <br>
-          <a href="https://www.functionbetterhc.com/" target="_blank" style="padding-left: 12px;"><img class="footer-icon" src="assets\website.svg" alt="functionbetterhc-icon"></a>
-          <footer-info-1 class="l10n">
-            FBHC Website
-          </footer-info-1>
-          <!-- FACEBOOK LINK <a href="https://www.facebook.com/profile.php?id=61578004507456" target="_blank"><img class="footer-icon" src="assets\facebook.svg" alt="facebook-icon"></a> -->
-          <!-- YELP LINK <a href="https://www.yelp.com/"><img class="footer-icon" src="assets\yelp.svg" alt="yelp-icon"></a> -->
+        <h5>Check Us Out</h5>
+          <a href="https://www.instagram.com/sweetsbyyuki/" target="_blank" style="padding-left: 12px;"><img class="footer-icon" src="assets\instagram.svg" alt="instagram-icon"></a>
       </div>
     </div>
   </div>
@@ -282,8 +189,7 @@ function changeIcon() {
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/dictionary.js"></script>
-<script src="js/jquery.l10n.js"></script>
-<script src="js/translator.js"></script>
+
+</body>
 
 </html>
